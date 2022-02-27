@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="GBK"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 
@@ -29,14 +29,14 @@ $(function() {
   
   <body>
 <div class="divContent">
-	<span class="spanPrice">Ö§¸¶½ğ¶î£º</span><span class="price_t">&yen;${order.total }</span>
-	<span class="spanOid">±àºÅ£º${order.oid }</span>
+	<span class="spanPrice">æ”¯ä»˜é‡‘é¢ï¼š</span><span class="price_t">&yen;${order.total }</span>
+	<span class="spanOid">ç¼–å·ï¼š${order.oid }</span>
 </div>
 <form action="<c:url value='/OrderServlet'/>" method="post" id="form1" target="_top">
 <input type="hidden" name="method" value="payment"/>
 <input type="hidden" name="oid" value="${order.oid }"/>
 <div class="divBank">
-	<div class="divText">Ñ¡ÔñÍøÉÏÒøĞĞ</div>
+	<div class="divText">é€‰æ‹©ç½‘ä¸Šé“¶è¡Œ</div>
 	<div style="margin-left: 20px;">
 	  <div style="margin-bottom: 20px;">
 		<input id="ICBC-NET-B2C" type="radio" name="yh" value="ICBC-NET-B2C" checked="checked"/>
@@ -118,8 +118,8 @@ $(function() {
 	  </div>
 	</div>
 	<div style="margin: 40px;">
-		<a href="javascript:void " class="linkNext">ÏÂÒ»²½</a>
-		<!-- ÔÚvoidºóÃæ×·¼Ó  $('#form1').submit();  ¿ÉÒÔ½øĞĞÌø×ª -->
+		<a href="javascript:void " class="linkNext">ä¸‹ä¸€æ­¥</a>
+		<!-- åœ¨voidåé¢è¿½åŠ   $('#form1').submit();  å¯ä»¥è¿›è¡Œè·³è½¬ -->
 	</div>
 </div>
 </form>

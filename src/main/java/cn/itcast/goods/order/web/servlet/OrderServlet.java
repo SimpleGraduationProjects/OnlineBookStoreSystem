@@ -281,8 +281,7 @@ public class OrderServlet extends BaseServlet {
 	 * @throws ServletException
 	 * @throws IOException
 	 */
-	public String createOrder(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException {
+	public String createOrder(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		/*
 		 * 1. 获取所有购物车条目的id，查询之
 		 */
@@ -300,7 +299,7 @@ public class OrderServlet extends BaseServlet {
 		order.setOid(CommonUtils.uuid());//设置主键
 		order.setOrdertime(String.format("%tF %<tT", new Date()));//下单时间
 		order.setStatus(1);//设置状态，1表示未付款
-		order.setAddress(req.getParameter("address"));//设置收货地址
+		order.setAddress(new String(req.getParameter("address").getBytes("ISO-8859-1"), "UTF-8"));//设置收货地址
 		User owner = (User)req.getSession().getAttribute("sessionUser");
 		order.setOwner(owner);//设置订单所有者
 		

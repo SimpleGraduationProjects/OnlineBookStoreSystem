@@ -2,7 +2,7 @@
 <c3p0-config>
     <default-config>
         <!-- 核心参数配置 -->
-        <property name="jdbcUrl">jdbc:mysql://localhost:3306/graduation_goods</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/graduation_9_goods</property>
         <property name="driverClass">com.mysql.jdbc.Driver</property>
         <property name="user">root</property>
         <property name="password">123456</property>
